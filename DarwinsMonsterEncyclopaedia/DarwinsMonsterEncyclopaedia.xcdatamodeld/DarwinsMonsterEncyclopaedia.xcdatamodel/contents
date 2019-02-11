@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="12134.2" systemVersion="16E195" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Image" representedClassName=".Image" syncable="YES">
+        <attribute name="image" optional="YES" attributeType="Transformable" syncable="YES"/>
+        <relationship name="toMonster" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Monster" inverseName="toImage" inverseEntity="Monster" syncable="YES"/>
+    </entity>
+    <entity name="Monster" representedClassName=".Monster" syncable="YES">
+        <attribute name="age" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="attackPower" optional="YES" attributeType="Integer 32" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="created" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="desc" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="health" optional="YES" attributeType="Integer 32" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="monsterName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="species" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="toImage" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Image" inverseName="toMonster" inverseEntity="Image" syncable="YES"/>
+        <relationship name="toSpecies" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Species" inverseName="toMonster" inverseEntity="Species" syncable="YES"/>
+    </entity>
+    <entity name="Species" representedClassName=".Species" syncable="YES">
+        <attribute name="speciesName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="speciesType" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="toMonster" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Monster" inverseName="toSpecies" inverseEntity="Monster" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Monster" positionX="-153" positionY="-9" width="128" height="178"/>
+        <element name="Species" positionX="133" positionY="-75" width="128" height="88"/>
+        <element name="Image" positionX="-200" positionY="-189" width="128" height="73"/>
+    </elements>
+</model>
