@@ -3,7 +3,7 @@ A simple iOS project which helps in creating and saving Pokemon.
 
 ## Demo
 
-<a href="https://imgflip.com/gif/2tj16a"><img src="https://i.imgflip.com/2tj16a.gif" title="made at imgflip.com"/></a>
+<a href="https://imgflip.com/gif/2zds0m"><img src="https://i.imgflip.com/2zds0m.gif" title="made at imgflip.com"/></a>
 
 ## Getting Started
 
